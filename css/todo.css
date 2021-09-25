@@ -1,0 +1,13 @@
+body{
+    background-color: #e6feff
+}
+
+h1{
+    text-align: center;
+}
+
+.show-btn{
+    align-items: center;
+    margin-left: 45%;
+    margin-bottom: 1rem;
+}
