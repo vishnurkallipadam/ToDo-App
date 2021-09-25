@@ -1,26 +1,25 @@
-let uname=document.getElementById("username").value;
-let pwd=document.getElementById("password").value;
+const form=document.getElementById("form1");
+const username=document.getElementById("username");
 
-function validate(){
-    console.log(uname);
+const password1=document.getElementById("password");
 
-    let res=0;
-    if(uname == 'admin'){
-        res=res+1;
+
+form.addEventListener('submit',(event)=>{
+    event.preventDefault();
+    checkInputs();
+});
+function checkInputs(){
+    const usernameValue=username.value.trim();
+    
+    const password1Value= password1.value.trim();
+    
+   
+    if(usernameValue=="admin"&&password1Value=="12345"){
+        form.setAttribute('action','todo.html');
+        form.submit();
+        
     }else{
-        alert("invalid username")
+        alert("invalid username or password")
     }
-
-    if(pwd =='12345'){
-        res=res+1
-    }else{
-        alert("invalid password")
-    }
-
-    if(res==2){
-        return true;
-    }else{
-        return false;
-    }
-
+    
 }
